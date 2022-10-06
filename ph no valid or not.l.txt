@@ -1,0 +1,19 @@
+%{
+%}
+
+%%
+  
+[1-9][0-9]{9} {printf("\n The Mobile Number is Valid\n");}
+  
+.+ {printf("\n The Mobile Number is Invalid\n");}
+  
+%%
+int yywrap(void) {}
+
+int main() 
+{
+    printf("\nEnter Mobile Number : ");
+    yylex();
+    printf("\n");
+    return 0;
+}
